@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { BrandGithub, BrandTwitter, InfoCircle, Moon, Sun } from '@vicons/tabler';
+import { Books, BrandGithub, BrandTwitter, InfoCircle, Moon, Sun } from '@vicons/tabler';
 import { useStyleStore } from '@/stores/style.store';
 
 const styleStore = useStyleStore();
@@ -42,6 +42,17 @@ const { isDarkTheme } = toRefs(styleStore);
     <c-button circle variant="text" :aria-label="$t('home.nav.mode')" @click="() => styleStore.toggleDark()">
       <n-icon v-if="isDarkTheme" size="25" :component="Sun" />
       <n-icon v-else size="25" :component="Moon" />
+    </c-button>
+  </c-tooltip>
+  <c-tooltip tooltip="blog" position="bottom">
+    <c-button
+      circle
+      variant="text"
+      href="https://phenix-g.github.io"
+      rel="noopener"
+      target="_blank"
+    >
+      <n-icon size="25" :component="Books" />
     </c-button>
   </c-tooltip>
 </template>
