@@ -17,6 +17,7 @@ import svgLoader from 'vite-svg-loader';
 import { configDefaults } from 'vitest/config';
 
 const baseUrl = process.env.BASE_URL ?? '/';
+// const baseUrl = process.env.BASE_URL ?? '/it-tools/';
 
 // https://vitejs.dev/config/
 export default defineConfig({
